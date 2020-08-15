@@ -3,9 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LogingBattleNet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="506" Width="306" WindowStyle="None" ResizeMode="NoResize">
+        Title="MainWindow" Height="506" Width="406" WindowStyle="None" ResizeMode="NoResize">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF242E3F"/>
@@ -22,11 +21,38 @@
             <RowDefinition Height="90"/>
         </Grid.RowDefinitions>
         <Grid Name="ToolBar" Grid.Row="0">
-            <Polygon Fill="White" Opacity="0.2" Points="76,0,
-                 90,7,
-                 229,7,
-                 243,0 
+            <Polygon Fill="White" Opacity="0.2" Points="116,0,
+                 126,7,
+                 290,7,
+                 300,0 
                 "/>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Image Name="MinimizeImg" Height="15" Width="15"  Opacity="0.5" Margin="5">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/minimize.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=MinimizeImg}" Value="true">
+                                    <Setter Property="Source" Value="src/minimize_action.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+                <Image Name="CrossImg" Height="15" Width="15" Opacity="0.5" Margin="5">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/cross.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=CrossImg}" Value="true">
+                                    <Setter Property="Source" Value="/src/cross_action.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </StackPanel>
         </Grid>
         
     </Grid>

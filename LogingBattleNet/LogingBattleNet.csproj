@@ -6,4 +6,32 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="cross.png" />
+    <None Remove="minimize.png" />
+    <None Remove="src\cross.png" />
+    <None Remove="src\cross_action.png" />
+    <None Remove="src\minimize.png" />
+    <None Remove="src\minimize_action.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="src\cross_action.png" />
+    <Resource Include="src\minimize_action.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="src\cross.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\minimize.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="cross.png" />
+    <Resource Include="minimize.png" />
+  </ItemGroup>
+
 </Project>
