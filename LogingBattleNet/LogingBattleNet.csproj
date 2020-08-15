@@ -12,6 +12,10 @@
     <None Remove="src\Blizzard_Entertainment_Logo.png" />
     <None Remove="src\cross.png" />
     <None Remove="src\cross_action.png" />
+    <None Remove="src\down-arrow.png" />
+    <None Remove="src\down-arrow_hovered.png" />
+    <None Remove="src\globus.png" />
+    <None Remove="src\globus_hovered.png" />
     <None Remove="src\minimize.png" />
     <None Remove="src\minimize_action.png" />
   </ItemGroup>
@@ -19,6 +23,10 @@
   <ItemGroup>
     <Resource Include="src\Blizzard_Entertainment_Logo.png" />
     <Resource Include="src\cross_action.png" />
+    <Resource Include="src\down-arrow.png" />
+    <Resource Include="src\down-arrow_hovered.png" />
+    <Resource Include="src\globus.png" />
+    <Resource Include="src\globus_hovered.png" />
     <Resource Include="src\minimize_action.png" />
   </ItemGroup>
 
