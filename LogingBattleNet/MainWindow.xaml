@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="506" Width="406" WindowStyle="None" ResizeMode="NoResize">
+        Title="MainWindow" Height="506" Width="406" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF242E3F"/>
@@ -20,15 +20,19 @@
             <RowDefinition Height="300"/>
             <RowDefinition Height="90"/>
         </Grid.RowDefinitions>
-        <Grid Name="ToolBar" Grid.Row="0">
+        <Grid Name="ToolBar" Grid.Row="0" Background="Transparent" MouseDown="ToolBar_MouseDown">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="22*"/>
+            </Grid.ColumnDefinitions>
             <Polygon Fill="White" Opacity="0.2" Points="116,0,
                  126,7,
                  290,7,
                  300,0 
-                "/>
-            
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Image Name="MinimizeImg" Height="15" Width="15"  Opacity="0.5" Margin="5">
+                " Grid.ColumnSpan="2"/>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="356,0,0,0">
+                <Image Name="MinimizeImg" Height="15" Width="15"  Opacity="0.5" Margin="5" MouseDown="MinimizeImg_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="/minimize.png"/>
@@ -39,8 +43,11 @@
                             </Style.Triggers>
                         </Style>
                     </Image.Style>
+                    <Image.Effect>
+                        <BlurEffect Radius="1"/>
+                    </Image.Effect>
                 </Image>
-                <Image Name="CrossImg" Height="15" Width="15" Opacity="0.5" Margin="5">
+                <Image Name="CrossImg" Height="15" Width="15" Opacity="0.5" Margin="5" MouseDown="CrossImg_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="/cross.png"/>
@@ -51,9 +58,14 @@
                             </Style.Triggers>
                         </Style>
                     </Image.Style>
+                    <Image.Effect>
+                        <BlurEffect Radius="1"/>
+                    </Image.Effect>
                 </Image>
             </StackPanel>
         </Grid>
-        
+        <Grid Grid.Row="1" Background="Transparent">
+            <Image Source="src/Blizzard_Entertainment_Logo.png" MouseDown="ToolBar_MouseDown"/>
+        </Grid>
     </Grid>
 </Window>

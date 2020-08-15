@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="cross.png" />
     <None Remove="minimize.png" />
+    <None Remove="src\Blizzard_Entertainment_Logo.png" />
     <None Remove="src\cross.png" />
     <None Remove="src\cross_action.png" />
     <None Remove="src\minimize.png" />
@@ -16,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="src\Blizzard_Entertainment_Logo.png" />
     <Resource Include="src\cross_action.png" />
     <Resource Include="src\minimize_action.png" />
   </ItemGroup>
