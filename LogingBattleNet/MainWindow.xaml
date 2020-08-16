@@ -175,5 +175,13 @@
             </Button>
         </Border>
         
+        <Grid Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top"
+              Margin="25, 42, 0 , 0"
+              >
+            <Polygon Fill="Black" StrokeThickness="2"
+                     Points=""
+                     />
+        </Grid>
+
     </Grid>
 </Window>
